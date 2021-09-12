@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.App {
+    background: url(img/scenery.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+}
+
+.App-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.App-header span {
+    color: salmon;
+}
+
+.App-header h1 {
+    margin-bottom: 1rem;
+}
+
+.todo-app {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    width: 80%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.todo-task,
+.completed {
+    margin-bottom: 5rem;
+}
+
+.todo-category {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    font-size: 2.1rem;
+}
+
+.todo-category::after {
+    content: "";
+    position: absolute;
+    background: salmon;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+}
+
+.todo-form {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    font-size: 1.8rem;
+}
+
+.todo-row h3 {
+    font-weight: 400;
+}
+
+.todo-row-completed {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.todo-row svg,
+.todo-row-completed svg {
+    margin-right: 0.5rem;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+.todo-row-completed svg {
+    color: lightgreen;
+}
+
+.todo-row p,
+.todo-row-completed p {
+    text-align: left;
+}
+
+.todo-row-completed {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    color: black;
+}
+
+.todo-input {
+    padding: 1rem;
+    border: 0;
+    width: 100%;
+}
+
+.todo-input {
+    border-radius: 2px;
+}
+
+.todo-input:focus {
+    outline: none;
+    border: 2px solid dodgerblue;
+}
+
+.todo-button {
+    font-size: calc(35px + 2vmin);
+    color: salmon;
+    padding: 0.8rem;
+}
+
+.todo-input-edit,
+.todo-button-edit {
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+
+.todo-input-edit {
+    background: none;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: calc(5px + 2vmin);
+    padding-left: 1rem;
+}
+
+.todo-input-edit:focus {
+    outline: none;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+    .App-header {
+        font-size: calc(4px + 2.5vmin);
+    }
+    .todo-app {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .todo-app {
+        width: 40%;
+    }
+}
